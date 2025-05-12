@@ -1,0 +1,19 @@
+services:
+  - type: web
+    name: goldlive
+    env: node
+    buildCommand: npm install && npm run build
+    startCommand: npm run start:prod
+    envVars:
+      - key: NODE_ENV
+        value: production
+      - key: BTMC_API_KEY
+        sync: false
+      - key: DOJI_API_KEY
+        sync: false
+      - key: GOLD_API_TOKEN
+        sync: false
+      - key: TELEGRAM_BOT_TOKEN
+        sync: false
+      - key: TELEGRAM_CHAT_ID
+        sync: false
