@@ -94,7 +94,7 @@ export class GoldService {
     this.logger.log('GoldService initialized with API keys');
   }
 
-  @Cron('0 * * * *') // Run every hour
+  @Cron('*/10 * * * *') // Run every 10 minutes
   async fetchAndNotifyPrices() {
     this.logger.log('Starting to fetch gold prices...');
     const startTime = Date.now();
